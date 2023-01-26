@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: db_mongo
+    restart: always
+    ports: 
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: lappis
+      MONGO_INITDB_ROOT_PASSWORD: lappis
+      MONGO_INITDB_DATABASE: mongo_database 

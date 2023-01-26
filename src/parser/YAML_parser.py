@@ -1,10 +1,4 @@
 import yaml
-import importlib
-import sys
-
-#from src.parser.parser_base import ParserBase
-sys.path.insert(0, "/home/pedrocampos/Documentos/github/Trabalho-Individual-2022-2--Public/src/parser")
-#ParserBase = importlib.import_module('src.parser.parser_base')
 import parser_base
 
 class YAMLParser(parser_base.ParserBase):

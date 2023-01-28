@@ -1,5 +1,6 @@
 from parser.parser_base import ParserBase
 from parser.const import model_type
+
 class ModelParser(ParserBase):
     
     def __init__(self, columns_alias):

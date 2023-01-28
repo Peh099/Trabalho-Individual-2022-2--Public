@@ -7,6 +7,7 @@ class YAMLParser(ParserBase):
         return self._parse_yaml()
 
     def _parse_yaml(self):
+        
         with open(self.filepath, 'r') as file:
             dag_config_dict = yaml.safe_load(file)
 

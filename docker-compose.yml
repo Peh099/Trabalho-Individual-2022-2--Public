@@ -12,20 +12,17 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: lappis
       MONGO_INITDB_DATABASE: mongo_database 
     volumes:
-      - /mongo-db:/data 
-    networks:
-      - network
+      - .:/data
 
   application:
-      image: app:final
+      image: python:3.8.10
       ports:
           - 8000:8000
-      networks:
-          - network
       build:
-          context: src
+          context: .
           dockerfile: dockerfile
-
-networks:
-    network:
-      driver: bridge
+      command: "python /src/main.py"
+      volumes:
+        - .:/application
+      depends_on:
+        - mongodb

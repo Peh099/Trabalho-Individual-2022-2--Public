@@ -1,7 +1,7 @@
 import yaml
-import parser_base
+from parser.parser_base import ParserBase
 
-class YAMLParser(parser_base.ParserBase):
+class YAMLParser(ParserBase):
 
     def parse(self):
         return self._parse_yaml()

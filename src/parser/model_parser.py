@@ -1,7 +1,6 @@
-import parser_base
-import const 
-
-class ModelParser(parser_base.ParserBase):
+from parser.parser_base import ParserBase
+from parser.const import model_type
+class ModelParser(ParserBase):
     
     def __init__(self, columns_alias):
         self.columns_alias = columns_alias
@@ -32,13 +31,13 @@ class ModelParser(parser_base.ParserBase):
             type = self._try_get(input, 'type')
             
         
-            if (type == const.model_type['ADDRESS']):
+            if (type == model_type['ADDRESS']):
                 columns_set_alias = self.get_columns(input)
                 keyboard_smash, n_estimators, test_size = self.get_thresholds(input, columns_set_alias)
                 
                 configs.append({
                     'model': 'keyboard_smash',
-                    'type': const.model_type['ADDRESS'],
+                    'type': model_type['ADDRESS'],
                     'columns_set_alias': columns_set_alias,
                     'keyboard_smash': keyboard_smash,
                     'n_estimators': n_estimators,

@@ -16,6 +16,7 @@ Welcome to Gces-Projeto-Final's documentation!
    tests.data_pipeline
    tests.parser
    tests
+   doxygen_files
 
 Indices and tables
 ==================

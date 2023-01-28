@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="pt-BR">
+  <compounddef id="dockerfile" kind="file" language="C++">
+    <compoundname>dockerfile</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">FROM<sp/>python:3.8</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">WORKDIR<sp/>/src</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">COPY<sp/>requirements.txt<sp/>.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">RUN<sp/>pip<sp/>install<sp/>-r<sp/>requirements.txt</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">COPY<sp/>.<sp/>.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">EXPOSE<sp/>8000<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">CMD<sp/>[&quot;python&quot;,<sp/>&quot;src/main.py&quot;]</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/User/Documents/GitHub/Trabalho-Individual-2022-2--Public/dockerfile"/>
+  </compounddef>
+</doxygen>

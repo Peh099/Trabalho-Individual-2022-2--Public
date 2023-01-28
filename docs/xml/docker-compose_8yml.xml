@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="pt-BR">
+  <compounddef id="docker-compose_8yml" kind="file" language="C++">
+    <compoundname>docker-compose.yml</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">version:<sp/>&quot;3.7&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">services:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>mongodb:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>image:<sp/>mongo:latest</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>container_name:<sp/>db_mongo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>restart:<sp/>always</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ports:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>27017:27017</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>environment:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>MONGO_INITDB_ROOT_USERNAME:<sp/>lappis</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>MONGO_INITDB_ROOT_PASSWORD:<sp/>lappis</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>MONGO_INITDB_DATABASE:<sp/>mongo_database<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>volumes:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>.:/data</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>application:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>image:<sp/>python:3.8.10</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ports:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>8000:8000</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>build:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context:<sp/>.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dockerfile:<sp/>dockerfile</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>command:<sp/>&quot;python<sp/>/src/main.py&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>volumes:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>.:/application</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>depends_on:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>mongodb</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/User/Documents/GitHub/Trabalho-Individual-2022-2--Public/docker-compose.yml"/>
+  </compounddef>
+</doxygen>

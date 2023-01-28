@@ -1,11 +1,7 @@
 import os
 
 class ParserBase():
-    """
-    Testando documentacao
 
-    """
-    
     def __init__(self, filepath = 'src/yamls/config.yaml'):
         self.filepath = filepath
     

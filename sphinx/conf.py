@@ -23,7 +23,9 @@ release = '0.1.0'
 
 extensions = ['sphinx.ext.autodoc', 'breathe']
 
-breathe_projects = { "sphinx": "../docs/xml/" }
+breathe_projects = { "gces-projeto-final": "../docs/xml/" }
+
+breathe_default_project = "gces-projeto-final"
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']

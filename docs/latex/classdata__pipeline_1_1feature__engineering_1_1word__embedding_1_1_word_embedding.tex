@@ -1,0 +1,119 @@
+\hypertarget{classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding}{}\doxysection{Referência da Classe data\+\_\+pipeline.\+feature\+\_\+engineering.\+word\+\_\+embedding.\+Word\+Embedding}
+\label{classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding}\index{data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding@{data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding}}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_a10817fded0539110daef964d8bf1bd8a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, lang, dimensions)
+\item 
+def \mbox{\hyperlink{classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_abf75033d7367dcc2ce77151091b48342}{get\+\_\+embedding}} (self, text)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_a9f80ebd1ebd4388302cd3e19e56916ed}{bpl}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_a10817fded0539110daef964d8bf1bd8a}\label{classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_a10817fded0539110daef964d8bf1bd8a}} 
+\index{data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding@{data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding@{data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def data\+\_\+pipeline.\+feature\+\_\+engineering.\+word\+\_\+embedding.\+Word\+Embedding.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lang,  }\item[{}]{dimensions }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize a word embedding object using the BytePairLanguage model.
+
+Parameters
+----------
+lang: str
+    The language to use for the word embedding (default is "es")
+dimensions: str
+    The number of dimensions for the word embedding vectors (default is 25)
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{def\ }\_\_init\_\_(self,\ lang,\ dimensions): }
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}Initialize\ a\ word\ embedding\ object\ using\ the\ BytePairLanguage\ model. }}
+\DoxyCodeLine{00007\ \textcolor{stringliteral}{ }}
+\DoxyCodeLine{00008\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ Parameters }}
+\DoxyCodeLine{00009\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{00010\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ lang:\ str }}
+\DoxyCodeLine{00011\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ The\ language\ to\ use\ }\textcolor{keywordflow}{for}\ the\ word\ embedding\ (default\ \textcolor{keywordflow}{is}\ \textcolor{stringliteral}{"{}es"{}}) }
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ dimensions:\ str }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ The\ number\ of\ dimensions\ \textcolor{keywordflow}{for}\ the\ word\ embedding\ vectors\ (default\ \textcolor{keywordflow}{is}\ 25) }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{} }}
+\DoxyCodeLine{00015\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ self.bpl\ =\ BytePairLanguage(lang=lang,\ dim=dimensions)\  }}
+\DoxyCodeLine{00016\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \  }}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_abf75033d7367dcc2ce77151091b48342}\label{classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_abf75033d7367dcc2ce77151091b48342}} 
+\index{data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding@{data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding}!get\_embedding@{get\_embedding}}
+\index{get\_embedding@{get\_embedding}!data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding@{data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding}}
+\doxysubsubsection{\texorpdfstring{get\_embedding()}{get\_embedding()}}
+{\footnotesize\ttfamily def data\+\_\+pipeline.\+feature\+\_\+engineering.\+word\+\_\+embedding.\+Word\+Embedding.\+get\+\_\+embedding (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{text }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the word embedding vector for a given text.
+
+Parameters
+----------
+text: str
+    The string to be processed
+
+Returns
+----------
+arr[float]
+    A word embedding vector for the given text
+
+Examples
+--------
+>>> get_embedding("This is a text", "es", 25)
+[ 0.06799883  0.17547965  0.47599664  0.16108984 -0.1360625  -0.10632467
+-0.10654568 -0.09805    -0.33004168 -0.33528003 -0.23304085  0.36661038
+-0.5797167   0.53252834  0.30276018 -0.01584417  0.85087484  0.14121284
+0.74862367 -0.33011952  0.015432    0.02694534  0.10118082 -0.34017918
+-0.14560167]
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{def\ }get\_embedding(self,\ text): }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}Get\ the\ word\ embedding\ vector\ for\ a\ given\ text. }}
+\DoxyCodeLine{00019\ \textcolor{stringliteral}{ }}
+\DoxyCodeLine{00020\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ Parameters }}
+\DoxyCodeLine{00021\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{00022\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ text:\ str }}
+\DoxyCodeLine{00023\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ The\ string\ to\ be\ processed }}
+\DoxyCodeLine{00024\ \textcolor{stringliteral}{ }}
+\DoxyCodeLine{00025\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ Returns }}
+\DoxyCodeLine{00026\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{00027\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ arr[float] }}
+\DoxyCodeLine{00028\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ A\ word\ embedding\ vector\ }\textcolor{keywordflow}{for}\ the\ given\ text }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \  }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ Examples }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ >>>\ get\_embedding(\textcolor{stringliteral}{"{}This\ is\ a\ text"{}},\ \textcolor{stringliteral}{"{}es"{}},\ 25) }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ [\ 0.06799883\ \ 0.17547965\ \ 0.47599664\ \ 0.16108984\ -\/0.1360625\ \ -\/0.10632467 }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ -\/0.10654568\ -\/0.09805\ \ \ \ -\/0.33004168\ -\/0.33528003\ -\/0.23304085\ \ 0.36661038 }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ -\/0.5797167\ \ \ 0.53252834\ \ 0.30276018\ -\/0.01584417\ \ 0.85087484\ \ 0.14121284 }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ 0.74862367\ -\/0.33011952\ \ 0.015432\ \ \ \ 0.02694534\ \ 0.10118082\ -\/0.34017918 }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ -\/0.14560167] }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{} }}
+\DoxyCodeLine{00039\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ }\textcolor{keywordflow}{return}\ self.bpl[text].vector}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_a9f80ebd1ebd4388302cd3e19e56916ed}\label{classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_a9f80ebd1ebd4388302cd3e19e56916ed}} 
+\index{data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding@{data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding}!bpl@{bpl}}
+\index{bpl@{bpl}!data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding@{data\_pipeline.feature\_engineering.word\_embedding.WordEmbedding}}
+\doxysubsubsection{\texorpdfstring{bpl}{bpl}}
+{\footnotesize\ttfamily data\+\_\+pipeline.\+feature\+\_\+engineering.\+word\+\_\+embedding.\+Word\+Embedding.\+bpl}
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Documents/\+Git\+Hub/\+Trabalho-\/\+Individual-\/2022-\/2-\/-\/\+Public/src/data\+\_\+pipeline/feature\+\_\+engineering/\mbox{\hyperlink{word__embedding_8py}{word\+\_\+embedding.\+py}}\end{DoxyCompactItemize}

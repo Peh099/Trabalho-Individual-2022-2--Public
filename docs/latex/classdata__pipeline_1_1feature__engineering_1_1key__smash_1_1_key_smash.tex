@@ -1,0 +1,268 @@
+\hypertarget{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash}{}\doxysection{Referência da Classe data\+\_\+pipeline.\+feature\+\_\+engineering.\+key\+\_\+smash.\+Key\+Smash}
+\label{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash}\index{data\_pipeline.feature\_engineering.key\_smash.KeySmash@{data\_pipeline.feature\_engineering.key\_smash.KeySmash}}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a23bba8ab35ebb2bd0af52ea6596e4925}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a3c0ca3e149360720f15327d78205e2f7}{calculate\+\_\+char\+\_\+frequency\+\_\+metric}} (self, text)
+\item 
+def \mbox{\hyperlink{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a3428a01b9d0fa0e403334b15374d84d0}{calculate\+\_\+irregular\+\_\+sequence\+\_\+metric}} (self, text, opt)
+\item 
+def \mbox{\hyperlink{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a596e7af2462276dfa0f5a73898eec2a4}{calculate\+\_\+number\+\_\+count\+\_\+metric}} (self, text)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a21cb1a9e286356f32a6f783e961f6a46}{char\+\_\+sets}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\begin{DoxyVerb}A class for calculating metrics to indicate key smashing behavior in a text.
+
+Key smashing is the act of typing on a keyboard in a rapid and uncontrolled manner,
+often resulting in a series of random characters being entered into a document or text field.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a23bba8ab35ebb2bd0af52ea6596e4925}\label{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a23bba8ab35ebb2bd0af52ea6596e4925}} 
+\index{data\_pipeline.feature\_engineering.key\_smash.KeySmash@{data\_pipeline.feature\_engineering.key\_smash.KeySmash}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!data\_pipeline.feature\_engineering.key\_smash.KeySmash@{data\_pipeline.feature\_engineering.key\_smash.KeySmash}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def data\+\_\+pipeline.\+feature\+\_\+engineering.\+key\+\_\+smash.\+Key\+Smash.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{def\ }\_\_init\_\_(self): }
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ self.char\_sets\ =\ \{ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}vowels"{}}:\ \textcolor{stringliteral}{'aeiouáéíóúãõ'}, }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}consonants"{}}:\ \textcolor{stringliteral}{'bcdfghjklmnñpqrstvwxyz'}, }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}special\_characters"{}}:\ \textcolor{stringliteral}{'!@\#\$\%\string^¨|\(\backslash\)'\(\backslash\)"{}\&*()\_+:;\string~`´]\}\{[\}ºª=-\/.¿¡'} }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \} }
+\DoxyCodeLine{00017\ \ \ \ \  }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a3c0ca3e149360720f15327d78205e2f7}\label{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a3c0ca3e149360720f15327d78205e2f7}} 
+\index{data\_pipeline.feature\_engineering.key\_smash.KeySmash@{data\_pipeline.feature\_engineering.key\_smash.KeySmash}!calculate\_char\_frequency\_metric@{calculate\_char\_frequency\_metric}}
+\index{calculate\_char\_frequency\_metric@{calculate\_char\_frequency\_metric}!data\_pipeline.feature\_engineering.key\_smash.KeySmash@{data\_pipeline.feature\_engineering.key\_smash.KeySmash}}
+\doxysubsubsection{\texorpdfstring{calculate\_char\_frequency\_metric()}{calculate\_char\_frequency\_metric()}}
+{\footnotesize\ttfamily def data\+\_\+pipeline.\+feature\+\_\+engineering.\+key\+\_\+smash.\+Key\+Smash.\+calculate\+\_\+char\+\_\+frequency\+\_\+metric (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{text }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate the Char Frequency Metric.
+
+Parameters
+----------
+text : str
+    The text to use for the calculation.
+    
+Returns
+-------
+float
+    Char Frequency Metric.
+    
+Examples
+--------
+>>> calculate_char_frequency_metric("PUENTECILLA KM. 1.7")
+1.121212121212121
+>>> calculate_char_frequency_metric("ASDASD XXXX")
+3.0
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{def\ }calculate\_char\_frequency\_metric(self,\ text): }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{} }}
+\DoxyCodeLine{00020\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ Calculate\ the\ Char\ Frequency\ Metric. }}
+\DoxyCodeLine{00021\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \  }}
+\DoxyCodeLine{00022\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ Parameters }}
+\DoxyCodeLine{00023\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{00024\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ text\ :\ str }}
+\DoxyCodeLine{00025\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ The\ text\ to\ use\ }\textcolor{keywordflow}{for}\ the\ calculation. }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \  }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ Returns }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ float }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ Char\ Frequency\ Metric. }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \  }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ Examples }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ >>>\ calculate\_char\_frequency\_metric(\textcolor{stringliteral}{"{}PUENTECILLA\ KM.\ 1.7"{}}) }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ 1.121212121212121 }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ >>>\ calculate\_char\_frequency\_metric(\textcolor{stringliteral}{"{}ASDASD\ XXXX"{}}) }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ 3.0 }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{} }}
+\DoxyCodeLine{00039\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ word\_results\ =\ [] }}
+\DoxyCodeLine{00040\ \textcolor{stringliteral}{ }}
+\DoxyCodeLine{00041\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ }\textcolor{keywordflow}{for}\ w\ \textcolor{keywordflow}{in}\ text.split(\textcolor{stringliteral}{'\ '}): }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ char\_count\ =\ [] }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ w\ \textcolor{keywordflow}{and}\ len(w)\ >\ 0: }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ e\ \textcolor{keywordflow}{in}\ set(w): }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ char\_count.append(w.count(e)**2) }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ word\_results.append(sum(char\_count)/len(w)) }
+\DoxyCodeLine{00047\  }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ word\_results\ ==\ 0\ \textcolor{keywordflow}{or}\ len(word\_results)\ ==\ 0: }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0 }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}: }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mean(word\_results) }
+\DoxyCodeLine{00052\ \ \ \ \  }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a3428a01b9d0fa0e403334b15374d84d0}\label{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a3428a01b9d0fa0e403334b15374d84d0}} 
+\index{data\_pipeline.feature\_engineering.key\_smash.KeySmash@{data\_pipeline.feature\_engineering.key\_smash.KeySmash}!calculate\_irregular\_sequence\_metric@{calculate\_irregular\_sequence\_metric}}
+\index{calculate\_irregular\_sequence\_metric@{calculate\_irregular\_sequence\_metric}!data\_pipeline.feature\_engineering.key\_smash.KeySmash@{data\_pipeline.feature\_engineering.key\_smash.KeySmash}}
+\doxysubsubsection{\texorpdfstring{calculate\_irregular\_sequence\_metric()}{calculate\_irregular\_sequence\_metric()}}
+{\footnotesize\ttfamily def data\+\_\+pipeline.\+feature\+\_\+engineering.\+key\+\_\+smash.\+Key\+Smash.\+calculate\+\_\+irregular\+\_\+sequence\+\_\+metric (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{text,  }\item[{}]{opt }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate the Irregular Sequence Metric.
+
+Parameters
+----------
+text : str
+    The text to use for the calculation.
+opt : str
+    The type of characters to consider for the calculation,
+    can be one of 'vowels', 'consonants', or 'special_characters'.
+    
+Returns
+-------
+float
+    Irregular Sequence Metric.
+    
+Examples
+--------
+>>> calculate_irregular_sequence_metric("PUENTECILLA KM. 1.7", "vowels")
+0.21052631578947367
+>>> calculate_irregular_sequence_metric("ASDASD XXXX", "consonants")
+2.1818181818181817
+>>> calculate_irregular_sequence_metric("!@#$% ASDFGHJKL", "special_characters")
+1.5625
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{def\ }calculate\_irregular\_sequence\_metric(self,\ text,\ opt): }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{} }}
+\DoxyCodeLine{00055\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ Calculate\ the\ Irregular\ Sequence\ Metric. }}
+\DoxyCodeLine{00056\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \  }}
+\DoxyCodeLine{00057\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ Parameters }}
+\DoxyCodeLine{00058\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{00059\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ text\ :\ str }}
+\DoxyCodeLine{00060\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ The\ text\ to\ use\ }\textcolor{keywordflow}{for}\ the\ calculation. }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ opt\ :\ str }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ The\ type\ of\ characters\ to\ consider\ \textcolor{keywordflow}{for}\ the\ calculation, }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ can\ be\ one\ of\ \textcolor{stringliteral}{'vowels'},\ \textcolor{stringliteral}{'consonants'},\ \textcolor{keywordflow}{or}\ \textcolor{stringliteral}{'special\_characters'}. }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \  }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ Returns }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ float }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ Irregular\ Sequence\ Metric. }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \  }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ Examples }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ >>>\ calculate\_irregular\_sequence\_metric(\textcolor{stringliteral}{"{}PUENTECILLA\ KM.\ 1.7"{}},\ \textcolor{stringliteral}{"{}vowels"{}}) }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ 0.21052631578947367 }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ >>>\ calculate\_irregular\_sequence\_metric(\textcolor{stringliteral}{"{}ASDASD\ XXXX"{}},\ \textcolor{stringliteral}{"{}consonants"{}}) }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ 2.1818181818181817 }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ >>>\ calculate\_irregular\_sequence\_metric(\textcolor{stringliteral}{"{}!@\#\$\%\ ASDFGHJKL"{}},\ \textcolor{stringliteral}{"{}special\_characters"{}}) }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ 1.5625 }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{} }}
+\DoxyCodeLine{00079\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ count\_sequence\ =\ 1 }}
+\DoxyCodeLine{00080\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ sequence\_regex\ =\ [] }}
+\DoxyCodeLine{00081\ \textcolor{stringliteral}{ }}
+\DoxyCodeLine{00082\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ text\ =\ str(text).lower() }}
+\DoxyCodeLine{00083\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ opt\ =\ self.char\_sets[opt] }}
+\DoxyCodeLine{00084\ \textcolor{stringliteral}{ }}
+\DoxyCodeLine{00085\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ }\textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ range(len(text)\ -\/\ 1): }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ text[i]\ \textcolor{keywordflow}{in}\ opt\ \textcolor{keywordflow}{and}\ text[i\ +\ 1]\ \textcolor{keywordflow}{in}\ opt: }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count\_sequence\ =\ count\_sequence\ +\ 1 }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}: }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (count\_sequence\ !=\ 1): }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sequence\_regex.append(count\_sequence**2) }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count\_sequence\ =\ 1 }
+\DoxyCodeLine{00092\  }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (count\_sequence\ !=\ 1): }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ sequence\_regex.append(count\_sequence**2) }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \  }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sum(sequence\_regex)/len(text) }
+\DoxyCodeLine{00097\ \ \ \ \  }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a596e7af2462276dfa0f5a73898eec2a4}\label{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a596e7af2462276dfa0f5a73898eec2a4}} 
+\index{data\_pipeline.feature\_engineering.key\_smash.KeySmash@{data\_pipeline.feature\_engineering.key\_smash.KeySmash}!calculate\_number\_count\_metric@{calculate\_number\_count\_metric}}
+\index{calculate\_number\_count\_metric@{calculate\_number\_count\_metric}!data\_pipeline.feature\_engineering.key\_smash.KeySmash@{data\_pipeline.feature\_engineering.key\_smash.KeySmash}}
+\doxysubsubsection{\texorpdfstring{calculate\_number\_count\_metric()}{calculate\_number\_count\_metric()}}
+{\footnotesize\ttfamily def data\+\_\+pipeline.\+feature\+\_\+engineering.\+key\+\_\+smash.\+Key\+Smash.\+calculate\+\_\+number\+\_\+count\+\_\+metric (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{text }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate the Number Count Metric.
+
+Parameters
+----------
+text : str
+    The text field to use for the calculation.
+    
+Returns
+-------
+float
+    Number Count Metric.
+    
+Examples
+--------
+>>> calculate_number_count_metric("ABC 123 !@#")
+0.0 
+>>> calculate_number_count_metric("ABC123 !@#")
+0.9
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{def\ }calculate\_number\_count\_metric(self,\ text): }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{} }}
+\DoxyCodeLine{00100\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ Calculate\ the\ Number\ Count\ Metric. }}
+\DoxyCodeLine{00101\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \  }}
+\DoxyCodeLine{00102\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ Parameters }}
+\DoxyCodeLine{00103\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ }}
+\DoxyCodeLine{00104\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ text\ :\ str }}
+\DoxyCodeLine{00105\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ The\ text\ field\ to\ use\ }\textcolor{keywordflow}{for}\ the\ calculation. }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \  }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ Returns }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ float }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ Number\ Count\ Metric. }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \  }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ Examples }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ >>>\ calculate\_number\_count\_metric(\textcolor{stringliteral}{"{}ABC\ 123\ !@\#"{}}) }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ 0.0\  }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ >>>\ calculate\_number\_count\_metric(\textcolor{stringliteral}{"{}ABC123\ !@\#"{}}) }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ 0.9 }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{} }}
+\DoxyCodeLine{00119\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ text\_list\ =\ text.split() }}
+\DoxyCodeLine{00120\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ calc\_num\_line\ =\ 0 }}
+\DoxyCodeLine{00121\ \textcolor{stringliteral}{ }}
+\DoxyCodeLine{00122\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ }\textcolor{keywordflow}{if}\ text\_list: }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ word\ \textcolor{keywordflow}{in}\ text\_list: }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ any(char.isdigit()\ \textcolor{keywordflow}{for}\ char\ \textcolor{keywordflow}{in}\ word)\ \textcolor{keywordflow}{and}\ any(\textcolor{keywordflow}{not}\ char.isdigit()\ \textcolor{keywordflow}{for}\ char\ \textcolor{keywordflow}{in}\ word): }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ num\ =\ len([char\ \textcolor{keywordflow}{for}\ char\ \textcolor{keywordflow}{in}\ word\ \textcolor{keywordflow}{if}\ char.isdigit()]) }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ calc\_num\ =\ num**2 }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ calc\_num\_line\ +=\ calc\_num }
+\DoxyCodeLine{00128\  }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ calc\_num\_line\ /\ len(\textcolor{stringliteral}{'\ '}.join(text\_list)) }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a21cb1a9e286356f32a6f783e961f6a46}\label{classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_a21cb1a9e286356f32a6f783e961f6a46}} 
+\index{data\_pipeline.feature\_engineering.key\_smash.KeySmash@{data\_pipeline.feature\_engineering.key\_smash.KeySmash}!char\_sets@{char\_sets}}
+\index{char\_sets@{char\_sets}!data\_pipeline.feature\_engineering.key\_smash.KeySmash@{data\_pipeline.feature\_engineering.key\_smash.KeySmash}}
+\doxysubsubsection{\texorpdfstring{char\_sets}{char\_sets}}
+{\footnotesize\ttfamily data\+\_\+pipeline.\+feature\+\_\+engineering.\+key\+\_\+smash.\+Key\+Smash.\+char\+\_\+sets}
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Documents/\+Git\+Hub/\+Trabalho-\/\+Individual-\/2022-\/2-\/-\/\+Public/src/data\+\_\+pipeline/feature\+\_\+engineering/\mbox{\hyperlink{key__smash_8py}{key\+\_\+smash.\+py}}\end{DoxyCompactItemize}

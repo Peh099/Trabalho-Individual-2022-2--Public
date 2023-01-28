@@ -1,0 +1,83 @@
+\hypertarget{classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser}{}\doxysection{Referência da Classe parser.\+YAML\+\_\+parser.\+YAMLParser}
+\label{classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser}\index{parser.YAML\_parser.YAMLParser@{parser.YAML\_parser.YAMLParser}}
+Diagrama de hierarquia para parser.\+YAML\+\_\+parser.\+YAMLParser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_a8ec75ddaa9abd26784d69ccefbd8f90a}{parse}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros Públicos herdados de \mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base}{parser.\+parser\+\_\+base.\+Parser\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base_a2ccc68acea8b4677c1761e39d9aeb058}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base_a4f3b278ff54c422767e66c78a7bb24d6}{filepath}}=\textquotesingle{}src/yamls/config.\+yaml\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Membros Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_a54e76ebb98b2649f328c7b887dfa8107}{\+\_\+parse\+\_\+yaml}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros Protegidos herdados de \mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base}{parser.\+parser\+\_\+base.\+Parser\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base_a5d88e7661694746fee4816141582c3a7}{\+\_\+try\+\_\+get}} (self, dict variable, field, error\+\_\+msg=None)
+\item 
+def \mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base_a2eafe46a0dfd547f102a6afcee176311}{\+\_\+get}} (self, dict variable, field, default\+\_\+value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+\doxysubsubsection*{Atributos Públicos herdados de \mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base}{parser.\+parser\+\_\+base.\+Parser\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base_a4f3b278ff54c422767e66c78a7bb24d6}{filepath}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_a54e76ebb98b2649f328c7b887dfa8107}\label{classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_a54e76ebb98b2649f328c7b887dfa8107}} 
+\index{parser.YAML\_parser.YAMLParser@{parser.YAML\_parser.YAMLParser}!\_parse\_yaml@{\_parse\_yaml}}
+\index{\_parse\_yaml@{\_parse\_yaml}!parser.YAML\_parser.YAMLParser@{parser.YAML\_parser.YAMLParser}}
+\doxysubsubsection{\texorpdfstring{\_parse\_yaml()}{\_parse\_yaml()}}
+{\footnotesize\ttfamily def parser.\+YAML\+\_\+parser.\+YAMLParser.\+\_\+parse\+\_\+yaml (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{def\ }\_parse\_yaml(self): }
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{with}\ open(self.filepath,\ \textcolor{stringliteral}{'r'})\ \textcolor{keyword}{as}\ file: }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ dag\_config\_dict\ =\ yaml.safe\_load(file) }
+\DoxyCodeLine{00012\  }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ dag\ =\ self.\_try\_get(dag\_config\_dict,\ \textcolor{stringliteral}{'dag'}) }
+\DoxyCodeLine{00014\  }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ initial\_parser\ =\ \{ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}dag\_id"{}}:\ self.\_try\_get(dag,\ \textcolor{stringliteral}{'id'}), }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}data\_path"{}}:\ self.\_try\_get(dag,\ \textcolor{stringliteral}{'data\_path'}), }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}output\_folder"{}}:\ self.\_try\_get(dag,\ \textcolor{stringliteral}{'output\_folder'}), }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}description"{}}:\ self.\_try\_get(dag,\ \textcolor{stringliteral}{'description'}), }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}feature\_engineering"{}}:\ self.\_try\_get(dag,\ \textcolor{stringliteral}{'feature\_engineering'}), }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}model"{}}:\ self.\_try\_get(dag,\ \textcolor{stringliteral}{'model'}), }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \} }
+\DoxyCodeLine{00023\  }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ initial\_parser }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_a8ec75ddaa9abd26784d69ccefbd8f90a}\label{classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_a8ec75ddaa9abd26784d69ccefbd8f90a}} 
+\index{parser.YAML\_parser.YAMLParser@{parser.YAML\_parser.YAMLParser}!parse@{parse}}
+\index{parse@{parse}!parser.YAML\_parser.YAMLParser@{parser.YAML\_parser.YAMLParser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily def parser.\+YAML\+\_\+parser.\+YAMLParser.\+parse (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{def\ }parse(self): }
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ self.\_parse\_yaml() }
+\DoxyCodeLine{00008\  }
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Documents/\+Git\+Hub/\+Trabalho-\/\+Individual-\/2022-\/2-\/-\/\+Public/src/parser/\mbox{\hyperlink{_y_a_m_l__parser_8py}{YAML\+\_\+parser.\+py}}\end{DoxyCompactItemize}

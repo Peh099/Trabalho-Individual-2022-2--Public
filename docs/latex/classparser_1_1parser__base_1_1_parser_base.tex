@@ -1,0 +1,97 @@
+\hypertarget{classparser_1_1parser__base_1_1_parser_base}{}\doxysection{Referência da Classe parser.\+parser\+\_\+base.\+Parser\+Base}
+\label{classparser_1_1parser__base_1_1_parser_base}\index{parser.parser\_base.ParserBase@{parser.parser\_base.ParserBase}}
+Diagrama de hierarquia para parser.\+parser\+\_\+base.\+Parser\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.000894cm]{classparser_1_1parser__base_1_1_parser_base}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base_a2ccc68acea8b4677c1761e39d9aeb058}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base_a4f3b278ff54c422767e66c78a7bb24d6}{filepath}}=\textquotesingle{}src/yamls/config.\+yaml\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base_a4f3b278ff54c422767e66c78a7bb24d6}{filepath}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Membros Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base_a5d88e7661694746fee4816141582c3a7}{\+\_\+try\+\_\+get}} (self, dict variable, field, error\+\_\+msg=None)
+\item 
+def \mbox{\hyperlink{classparser_1_1parser__base_1_1_parser_base_a2eafe46a0dfd547f102a6afcee176311}{\+\_\+get}} (self, dict variable, field, default\+\_\+value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classparser_1_1parser__base_1_1_parser_base_a2ccc68acea8b4677c1761e39d9aeb058}\label{classparser_1_1parser__base_1_1_parser_base_a2ccc68acea8b4677c1761e39d9aeb058}} 
+\index{parser.parser\_base.ParserBase@{parser.parser\_base.ParserBase}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!parser.parser\_base.ParserBase@{parser.parser\_base.ParserBase}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def parser.\+parser\+\_\+base.\+Parser\+Base.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filepath = {\ttfamily \textquotesingle{}src/yamls/config.yaml\textquotesingle{}} }\end{DoxyParamCaption})}
+
+
+
+Reimplementado por \mbox{\hyperlink{classparser_1_1model__parser_1_1_model_parser_a416260ece9beca7d897eec76762d9b2b}{parser.\+model\+\_\+parser.\+Model\+Parser}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{def\ }\_\_init\_\_(self,\ filepath\ =\ 'src/yamls/config.yaml'): }
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ self.filepath\ =\ filepath }
+\DoxyCodeLine{00007\ \ \ \ \  }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{classparser_1_1parser__base_1_1_parser_base_a2eafe46a0dfd547f102a6afcee176311}\label{classparser_1_1parser__base_1_1_parser_base_a2eafe46a0dfd547f102a6afcee176311}} 
+\index{parser.parser\_base.ParserBase@{parser.parser\_base.ParserBase}!\_get@{\_get}}
+\index{\_get@{\_get}!parser.parser\_base.ParserBase@{parser.parser\_base.ParserBase}}
+\doxysubsubsection{\texorpdfstring{\_get()}{\_get()}}
+{\footnotesize\ttfamily def parser.\+parser\+\_\+base.\+Parser\+Base.\+\_\+get (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{dict}]{variable,  }\item[{}]{field,  }\item[{}]{default\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{def\ }\_get(self,\ variable:\ dict,\ field,\ default\_value): }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}: }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ variable[field] }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{except}: }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ default\_value}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparser_1_1parser__base_1_1_parser_base_a5d88e7661694746fee4816141582c3a7}\label{classparser_1_1parser__base_1_1_parser_base_a5d88e7661694746fee4816141582c3a7}} 
+\index{parser.parser\_base.ParserBase@{parser.parser\_base.ParserBase}!\_try\_get@{\_try\_get}}
+\index{\_try\_get@{\_try\_get}!parser.parser\_base.ParserBase@{parser.parser\_base.ParserBase}}
+\doxysubsubsection{\texorpdfstring{\_try\_get()}{\_try\_get()}}
+{\footnotesize\ttfamily def parser.\+parser\+\_\+base.\+Parser\+Base.\+\_\+try\+\_\+get (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{dict}]{variable,  }\item[{}]{field,  }\item[{}]{error\+\_\+msg = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{def\ }\_try\_get(self,\ variable:\ dict,\ field,\ error\_msg=\textcolor{keywordtype}{None}): }
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}: }
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ variable[field] }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{except}\ KeyError: }
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keywordflow}{not}\ error\_msg: }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ error\_msg\ =\ f\textcolor{stringliteral}{'the\ field\ `\{field\}`\ is\ required.'} }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ file\_name\ =\ self.filepath.split(\textcolor{stringliteral}{'/'})[-\/1] }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ error\_msg\ =\ f\textcolor{stringliteral}{'Error\ in\ file\ \{file\_name\}:\ \{error\_msg\}'} }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ ValueError(error\_msg) }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \  }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classparser_1_1parser__base_1_1_parser_base_a4f3b278ff54c422767e66c78a7bb24d6}\label{classparser_1_1parser__base_1_1_parser_base_a4f3b278ff54c422767e66c78a7bb24d6}} 
+\index{parser.parser\_base.ParserBase@{parser.parser\_base.ParserBase}!filepath@{filepath}}
+\index{filepath@{filepath}!parser.parser\_base.ParserBase@{parser.parser\_base.ParserBase}}
+\doxysubsubsection{\texorpdfstring{filepath}{filepath}}
+{\footnotesize\ttfamily parser.\+parser\+\_\+base.\+Parser\+Base.\+filepath}
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Documents/\+Git\+Hub/\+Trabalho-\/\+Individual-\/2022-\/2-\/-\/\+Public/src/parser/\mbox{\hyperlink{parser__base_8py}{parser\+\_\+base.\+py}}\end{DoxyCompactItemize}

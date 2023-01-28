@@ -1,0 +1,33 @@
+\hypertarget{namespacedata__pipeline_1_1pre__processing_1_1concatenate__columns}{}\doxysection{Refência do Namespace data\+\_\+pipeline.\+pre\+\_\+processing.\+concatenate\+\_\+columns}
+\label{namespacedata__pipeline_1_1pre__processing_1_1concatenate__columns}\index{data\_pipeline.pre\_processing.concatenate\_columns@{data\_pipeline.pre\_processing.concatenate\_columns}}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedata__pipeline_1_1pre__processing_1_1concatenate__columns_a1b50d24e7adef5a0c638431ac5047bdf}{get\+\_\+concatenated\+\_\+column}} (csv, columns, column\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{namespacedata__pipeline_1_1pre__processing_1_1concatenate__columns_a1b50d24e7adef5a0c638431ac5047bdf}\label{namespacedata__pipeline_1_1pre__processing_1_1concatenate__columns_a1b50d24e7adef5a0c638431ac5047bdf}} 
+\index{data\_pipeline.pre\_processing.concatenate\_columns@{data\_pipeline.pre\_processing.concatenate\_columns}!get\_concatenated\_column@{get\_concatenated\_column}}
+\index{get\_concatenated\_column@{get\_concatenated\_column}!data\_pipeline.pre\_processing.concatenate\_columns@{data\_pipeline.pre\_processing.concatenate\_columns}}
+\doxysubsubsection{\texorpdfstring{get\_concatenated\_column()}{get\_concatenated\_column()}}
+{\footnotesize\ttfamily def data\+\_\+pipeline.\+pre\+\_\+processing.\+concatenate\+\_\+columns.\+get\+\_\+concatenated\+\_\+column (\begin{DoxyParamCaption}\item[{}]{csv,  }\item[{}]{columns,  }\item[{}]{column\+\_\+name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \textcolor{keyword}{def\ }get\_concatenated\_column(csv,\ columns,\ column\_name): }
+\DoxyCodeLine{00004\ \ \ \ \ if(type(columns)\ ==\ str): }
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ csv[column\_name]\ =\ csv[columns] }
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ DataFrame(csv[column\_name]) }
+\DoxyCodeLine{00007\ \ \ \ \  }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{for}\ value\ \textcolor{keywordflow}{in}\ columns: }
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ if(not(column\_name\ \textcolor{keywordflow}{in}\ csv)): }
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ csv[column\_name]\ =\ csv[value].astype(str) }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue} }
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \  }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ csv[column\_name]\ =\ csv[column\_name]\ +\ \textcolor{stringliteral}{'\ '}\ +\ csv[value].astype(str) }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \  }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{return}\ DataFrame(csv[column\_name]) }
+
+\end{DoxyCode}

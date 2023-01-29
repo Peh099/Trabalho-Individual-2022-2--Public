@@ -17,17 +17,22 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 3.8.10
+    - name: Configurando com python 3.8.10
       uses: actions/setup-python@v4
       with:
         python-version: "3.8"
-    - name: Install dependencies
+    - name: Instalando dependencias
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest
+        pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test with pytest
+    - name: Testando com pytest
       run: |
         pip install pytest
         export PYTHONPATH=src
         pytest --cov
+    - name: Executando o poetry
+      run: |
+        pip install poetry
+        cd gces-2022-2-poetry
+        poetry build

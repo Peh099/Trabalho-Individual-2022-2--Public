@@ -22,7 +22,7 @@ services:
       build:
           context: .
           dockerfile: dockerfile
-      command: "python /src/main.py"
+      command: "python3 src/main.py"
       depends_on:
         - mongodb
   

@@ -42,6 +42,7 @@ jobs:
         --user
     - name: Build a binary wheel and a source tarball
       run: >-
+        cd gces-2022-2-poetry
         python -m
         build
         --sdist
